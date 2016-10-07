@@ -1,0 +1,34 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src='./handlebars.runtime.js'></script>
+  <script src="./jquery/dist/jquery.js" charset="utf-8"></script>
+  <script src="./templates.js">
+
+  </script>
+
+</head>
+<body>
+  测试<div id='aaa'></div>
+  <script type="text/javascript">
+  var data = [
+      { "title":"aaa","content":"contentaaa"},
+      { "title":"aaa","content":"contentaaa"},
+      { "title":"aaa","content":"contentaaa"},
+      { "title":"aaa","content":"contentaaa"}
+  ];
+//"MyApp"]["templates"]["views"]["partials"]["footer"
+ alert(MyApp.templates.views.partials.header('aaa')) ;
+$('#aaa').html(MyApp.templates.views.partials.header({user:{username:'bbb'}}));
+      //使用预编译的tpl ，demoList就是我们之前生成的模板js的文件名
+      //MyApp.templates.views.article
+      // var html = Handlebars.template('MyApp/templates/article',function(a){
+      //   console.log(a)
+      // });
+      // html('MyApp/templates/article')
+      // $("#content").html(html);
+
+  </script>
+</body>
+</html>

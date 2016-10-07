@@ -1,0 +1,66 @@
+<div class="aw-container-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="aw-content-wrap clearfix">
+                <div class="col-sm-12 col-md-9 aw-main-content">
+                    <div class="aw-mod aw-explore-list">
+                        <div class="mod-body">
+                            <div class="aw-common-list" id="hds_container">
+
+
+                                    {{#each articles}}
+                                    <div class="aw-item active" data-topic-id="57,">
+                                        <a class="aw-user-name hidden-xs" data-id="3654"
+                                           href="/people/"
+                                           rel="nofollow"><img
+                                                src="{{this.pic}}"
+                                                alt=""/></a>
+                                        <div class="aw-question-content">
+                                            <h4>
+                                                <a href="/showArticle?aid={{this.aid}}">{{this.title}}</a>
+                                            </h4>
+                                            <p>作者:
+                                                <a href="/people/{{this.id}}"
+                                                   class="aw-user-name">{{this.username}}</a>
+				<span class="text-color-999">• {{this.answerCount}}个回复 • {{this.time}}
+				</span>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                            {{/each}}
+
+
+
+                            </div>
+                        </div>
+                        <div class="mod-footer">
+                            <div class="page-control" id="temp_pager">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<img src="" alt="" id="testImg">
+
+<script type="text/javascript" src="/public/js/bootstrap-paginator.js"></script>
+
+<script>
+
+    var options = {
+        currentPage:{{pager.currentPage}} ,
+        totalPages :{{pager.totalPage}},
+        pageUrl: function(type, page, current){
+            return '{{pager.url}}?current='+page;//模糊查询分页点击后变普通查询因为这个url
+        }
+    };
+
+    $('#temp_pager').bootstrapPaginator(options);
+</script>
+

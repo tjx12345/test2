@@ -1,0 +1,30 @@
+this["MyApp"] = this["MyApp"] || {};
+this["MyApp"]["templates"] = this["MyApp"]["templates"] || {};
+this["MyApp"]["templates"]["views"] = this["MyApp"]["templates"]["views"] || {};
+this["MyApp"]["templates"]["views"]["partials"] = this["MyApp"]["templates"]["views"]["partials"] || {};
+this["MyApp"]["templates"]["views"]["partials"]["footer"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<div class=\"aw-footer-wrap\">\r\n    <div class=\"aw-footer\">\r\n        Copyright © 2016, All Rights Reserved</span>\r\n\r\n        <span class=\"hidden-xs\">Powered By <a href=\"http://www.itcast.cn\" target=\"blank\">ITcast</a></span>\r\n\r\n    </div>\r\n</div>";
+},"useData":true});
+this["MyApp"]["templates"]["views"]["partials"]["header"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "\r\n        <a href=\"\" class=\"aw-user-nav-dropdown\">\r\n                    <img alt=\"tjx\" src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.user : depth0)) != null ? stack1.pic : stack1), depth0))
+    + "\"/>\r\n                    "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.user : depth0)) != null ? stack1.username : stack1), depth0))
+    + "\r\n        </a>\r\n                <div class=\"aw-dropdown dropdown-list pull-right\">\r\n                    <ul class=\"aw-dropdown-list\">\r\n                        <li class=\"hidden-xs\"><a href=\"/setting/profile/"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.user : depth0)) != null ? stack1.id : stack1), depth0))
+    + "\"><i class=\"icon icon-setting\"></i>\r\n                            设置</a></li>\r\n                        <li><a href=\"/logout\"><i class=\"icon icon-logout\"></i> 退出</a></li>\r\n                    </ul>\r\n                </div>\r\n";
+},"3":function(depth0,helpers,partials,data) {
+    return "            <!-- 登陆&注册栏 -->\r\n      <span>\r\n        <a class=\"register btn btn-normal btn-success\" href=\"/register\">注册</a>\r\n        <a class=\"login btn btn-normal btn-primary\" href=\"/login\">登录</a>\r\n      </span>\r\n            <!-- end 登陆&注册栏 -->\r\n";
+},"5":function(depth0,helpers,partials,data) {
+    return "            <!-- 发起 -->\r\n            <div class=\"aw-publish-btn\">\r\n                <a id=\"header_publish\" href=\"/publishArticle\" class=\"btn-primary\"><i\r\n                        class=\"icon icon-ask\"></i>发起</a>\r\n            </div>\r\n            <!-- end 发起 -->\r\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"aw-top-menu-wrap\">\r\n    <div class=\"container\">\r\n        <!-- logo -->\r\n        <div class=\"aw-logo hidden-xs\">\r\n            <a href=\"/\"></a>\r\n        </div>\r\n        <!-- end logo -->\r\n        <!-- 搜索框 -->\r\n        <div class=\"aw-search-box  hidden-xs hidden-sm\">\r\n            <form class=\"navbar-search\" action=\"/getArticleByName\" id=\"global_search_form\"\r\n                  method=\"post\">\r\n                <input class=\"form-control search-query\" type=\"text\" placeholder=\"搜索文章\" autocomplete=\"off\" name=\"q\"\r\n                       id=\"aw-search-query\"/>\r\n                <span title=\"搜索\" id=\"global_search_btns\" onClick=\"$('#global_search_form').submit();\"><i\r\n                        class=\"icon icon-search\"></i></span>\r\n                <div class=\"aw-dropdown\">\r\n                    <div class=\"mod-body\">\r\n                        <p class=\"title\">输入关键字进行搜索</p>\r\n                        <ul class=\"aw-dropdown-list hide\"></ul>\r\n                        <p class=\"search\"><span>搜索:</span><a onClick=\"$('#global_search_form').submit();\"></a></p>\r\n                    </div>\r\n                    <div class=\"mod-footer\">\r\n                        <a href=\"\" onClick=\"$('#header_publish').click();\"\r\n                           class=\"pull-right btn btn-mini btn-success publish\">发起问题</a>\r\n                    </div>\r\n                </div>\r\n            </form>\r\n        </div>\r\n        <!-- end 搜索框 -->\r\n        <!-- 导航 -->\r\n        <div class=\"aw-top-nav navbar\">\r\n            <div class=\"navbar-header\">\r\n                <button class=\"navbar-toggle pull-left\">\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                    <span class=\"icon-bar\"></span>\r\n                </button>\r\n            </div>\r\n            <nav role=\"navigation\" class=\"collapse navbar-collapse bs-navbar-collapse\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <!--<li><a href=\"\" class=\"\"><i class=\"icon icon-ul\"></i> 发现</a></li>-->\r\n\r\n                    <!-- <li><a href=\"http://wenda.golaravel.com/question/\" class=\"\">问题</a></li>\r\n\r\n                    <li><a href=\"http://wenda.golaravel.com/article/\" class=\"\">文章</a></li> -->\r\n\r\n                    <!--<li><a href=\"http://wenda.golaravel.com/topic/\"><i class=\"icon icon-topic\"></i> 话题</a></li>-->\r\n\r\n                </ul>\r\n            </nav>\r\n        </div>\r\n        <!-- end 导航 -->\r\n        <!--当前用户存在,以下代码可用-->\r\n\r\n        <!-- 用户栏 -->\r\n        <div class=\"aw-user-nav\">\r\n\r\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(3, data, 0),"data":data})) != null ? stack1 : "")
+    + "        </div>\r\n        <!-- end 用户栏 -->\r\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\r\n    </div>\r\n</div>";
+},"useData":true});

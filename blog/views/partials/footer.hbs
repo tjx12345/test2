@@ -1,0 +1,33 @@
+<div class="aw-footer-wrap">
+    <div class="aw-footer">
+        Copyright © 2016, All Rights Reserved</span>
+        <span class="hidden-xs">Powered By <a href="http://www.itcast.cn" target="blank">ITcast</a></span>
+        <script>
+        function showNotice() {
+        Notification.requestPermission(function (perm) {
+            if (perm == "granted") {
+                var notification = new Notification("这是一个通知撒:", {
+                    dir: "auto",
+                    lang: '<a href:"/">请点击</a>',
+                    tag: '<a href:"/">请点击</a>',
+                    icon: "https://static.cnblogs.com/images/adminlogo.gif",
+                    body: '<a href:"/">请点击</a>',
+                    data: '<a href:"/">请点击</a>',
+                });
+
+                notification.onclick = function(){
+                  window.location.href = '/aaa/1';
+                }
+                console.log(notification);
+            }
+        })
+    }
+    //声明当前
+          var socket = io('http://192.168.11.161:3000');//localhost时自己对自己发有时有些问题(严格匹配地址栏)
+          socket.on('myMsg', function(msg){
+
+              showNotice();
+          });
+        </script>
+    </div>
+</div>

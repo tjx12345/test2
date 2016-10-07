@@ -1,0 +1,7 @@
+﻿drop trigger answer_inc_trigger; 
+create trigger answer_inc_trigger
+ after insert on comments
+ for each row
+ begin
+ 	update articles set answerCount = answerCount + 1 where id = new.aid;
+ end
